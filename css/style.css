@@ -25,6 +25,7 @@ img, iframe, canvas, video, svg {
   margin: 0 auto;
   line-height: 1.5;
   letter-spacing: 1.5px;
+  overflow: hidden;
 }
 
 h2 {
@@ -663,7 +664,6 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
       grid-template-columns: 50% 50%;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-  gap: 20px;
   padding-top: 20px;
   width: 80%;
 }
@@ -766,6 +766,7 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
         grid-template-rows: auto;
     padding-top: 50px;
     width: 100%;
+    gap: 20px;
   }
   .overview__opening-hours p,
   .overview__contact p,

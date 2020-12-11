@@ -5,7 +5,6 @@
     "overview__opening-hours overview__faq";
     grid-template-columns: 50% 50%;
         grid-template-rows: auto auto;
-        gap: 20px;
         padding-top: 20px;
         width: 80%;
 
@@ -101,6 +100,7 @@
         grid-template-rows: auto;
         padding-top: 50px;
         width: 100%;
+        gap: 20px;
 
         &__opening-hours p,
         &__contact p,
