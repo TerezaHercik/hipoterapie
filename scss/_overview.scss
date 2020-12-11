@@ -1,0 +1,132 @@
+.overview {
+    display: grid;
+    grid-template-areas: 
+    "overview__address overview__contact"
+    "overview__opening-hours overview__faq";
+    grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        padding-top: 20px;
+        width: 80%;
+
+        &__faq--icon img {
+            width: 30px;
+        }
+
+
+        &__address, 
+        &__contact,
+        &__opening-hours,
+        &__faq {
+            border: 3px double silver;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        &__address {
+            grid-area: overview__address;
+           
+        }
+    
+        &__contact {
+            grid-area: overview__contact;
+        }
+    
+        &__opening-hours {
+            grid-area: overview__opening-hours;
+        }
+    
+        &__faq {
+            grid-area: overview__faq;
+        }
+
+    a {
+        text-decoration-style: none;
+        color: black;
+        list-style-type: none;
+    }
+}
+
+.overview-faq {
+    display: grid;
+    grid-template-areas: 
+    "overview-faq__address overview-faq__contact"
+    "overview-faq__opening-hours";
+    grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        padding-top: 10px;
+
+        &__faq--icon img {
+            width: 30px;
+        }
+
+
+        &__address, 
+        &__contact,
+        &__opening-hours,
+        &__faq {
+            border: 3px double silver;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        &__address {
+            grid-area: overview-faq__address;
+           
+        }
+    
+        &__contact {
+            grid-area: overview-faq__contact;
+        }
+    
+        &__opening-hours {
+            grid-area: overview-faq__opening-hours;
+        }
+    
+        &__faq {
+            grid-area: overview-faq__faq;
+        }
+    }
+
+
+@media screen and(min-width: 480px){
+    .overview {
+        display: grid;
+        grid-template-areas: 
+        "overview__address overview__contact overview__opening-hours overview__faq";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        padding-top: 50px;
+        width: 100%;
+
+        &__opening-hours p,
+        &__contact p,
+        &__address p {
+            text-align: center;
+        }
+    
+    }
+
+    .overview-faq {
+        
+        display: grid;
+        grid-template-areas: 
+        "overview-faq__address overview-faq__contact overview-faq__opening-hours";
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: auto;
+        padding-top: 50px;
+
+        &__opening-hours p,
+        &__contact p,
+        &__address p {
+            text-align: center;
+        }
+    
+    }
+       
+    }
+
+    

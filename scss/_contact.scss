@@ -1,0 +1,93 @@
+.contact {
+    display: block;
+
+    &__map {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    &__map h3 {
+        margin: 0 auto;
+    }
+
+    &__form {
+        max-width: 100%;
+        text-align: left;
+        padding: 10px;
+        margin: 0 auto;
+        border: 3px double silver;
+        border-radius: 10px;
+    
+    
+    }
+
+    &__form p {
+        font-size: 10px;
+    }
+
+    &__headline {
+        padding: 20px;
+    }
+
+    &__form button {
+        margin: 0 auto;
+    }
+
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=datetime-local], textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: rgb(228, 217, 217);
+    border-radius: 10px;
+}
+
+
+
+
+@media screen and(min-width: 480px) {
+    .contact {
+        display: grid;
+        grid-template-areas: 
+        "contact__headline contact__headline"
+        "contact__map contact__form";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto;
+        align-items: stretch;
+        justify-items: stretch;
+        padding-bottom: 50px;
+    
+        &__map {
+            grid-area: contact__map;
+            justify-self: stretch;
+            height: 200px;
+            padding: 20px 0;
+        } 
+        
+        &__map iframe {
+            height: 450px;
+        }
+    
+        &__form {
+            grid-area: contact__form;
+            padding-left: 20px;
+            padding-top: 20px;
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+    
+        &__form button {
+            justify-self: start;
+            margin: 0;
+        }
+       
+    }
+}
+    
+
+
+

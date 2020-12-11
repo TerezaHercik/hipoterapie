@@ -1,0 +1,31 @@
+
+.base {
+    margin: 15px;
+    width: 400px;
+}
+
+.base h2, p {
+    text-align: center;
+}
+
+
+
+@media screen and(min-width: 480px) {
+    .base {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .faq h2, p {
+        text-align: left;
+    }
+
+    .faq.base {
+        margin-top: 100px;
+    }
+
+    .faq.base h1 {
+        font-size: 700;
+    }
+
+}

@@ -1,0 +1,132 @@
+.button {
+    display: block;
+    margin-top: 35px;
+
+
+    &__primary {
+        display: block;
+        width: 200px;
+        padding: 20px;
+        background-color: $logo-blue;
+        border-radius: 10px;
+        border: 0;
+        font-size: 15px;
+        font-family: 'Raleway', sans-serif;
+        margin: 0 auto;
+    }
+
+    &__primary a {
+        text-decoration: none;
+        list-style-type: none;
+        color: black;
+    }
+
+    &__secondary {
+        display: block;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 0;
+        font-size: 15px;
+        font-family: 'Raleway', sans-serif;
+        margin: 0 auto;
+        margin-top: 10px;
+        background-color: white;
+    }
+
+    &__secondary a {
+        text-decoration: none;
+        list-style-type: none;
+        color: black;
+    }
+
+}
+
+.price-container__button {
+    
+    justify-self: center;
+    width: 100%;
+    background-color: $logo-blue;
+    border: 0;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+
+
+}
+
+.price-container__button a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+.button-page {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #9CA67B;
+    border-radius: 10px;
+    border: 0;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+
+
+@media screen and(min-width: 480px){
+
+    .button {
+        display: grid;
+        grid-template-areas: "primary secondary";
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+
+        &__primary {
+            grid-area: primary;
+            width: 150px;
+            justify-self: end;
+            padding: 20px;
+            background-color: $logo-blue;
+            font-size: 16px;
+          
+        }
+    
+        &__primary a {
+            text-decoration: none;
+            list-style-type: none;
+            color: black;
+        }
+    
+        &__secondary {
+            grid-area: secondary;
+            width: 150px;
+            justify-self: start;
+            padding: 20px;
+            font-size: 16px;
+            margin-top: 0;
+           
+        }
+
+        &__secondary a {
+            text-decoration: none;
+            list-style-type: none;
+            color: black;
+        }
+    
+    }
+ 
+    .button-page {
+        justify-self: start;
+        margin: 0;
+
+    }   
+    
+}
+
+

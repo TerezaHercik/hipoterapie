@@ -1,0 +1,140 @@
+
+.base-img h2 {
+    text-align: center;
+    color: white;
+}
+
+.base-img {
+    background-image: url(/images/baru/DSC_0973-2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 900px;
+}
+
+
+.services {
+    display: block;  
+    margin: 0 auto;
+
+
+       &__content {
+           border: 3px double white;
+           color: white;
+           border-radius: 10px;
+           height: 200px;
+           text-align: center;
+        //    background-color: rgb(208, 201, 201);
+           justify-items: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 250px;
+        width: 250px;
+       }
+
+       &__content h3, h4 {
+           padding: 10px;
+
+       }
+
+       &__content h3 {
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+           
+       }
+
+       &__content h4 {
+           margin: 0;
+           
+       }
+
+       &__content li {
+           text-align: left;
+           padding-right: 10px;
+           color: white;
+           
+       }
+ 
+  
+   
+ }
+
+
+
+@media screen and(min-width: 480px) {
+    .base-img {
+        background-image: url(/images/baru/DSC_0967-2-dark.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        height: 400px;
+
+    }
+
+    .base-img h2 {
+        padding-top: 20px;
+    }
+    
+    .services {
+        display: grid;
+       grid-template-areas: "services__content services__content services__content";
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: auto;
+       gap: 20px;
+       width: 100%;
+
+
+       &__content {
+        border: 1px solid white;
+        border-radius: 10px;
+        height: 400px;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        margin-top: 10px;
+        height: 250px;
+        width: 350px;
+        color: white;
+    }
+
+    &__content h3, h4 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    &__content h3 {
+         align-items: center;
+         padding-top: 20px;
+         padding-bottom: 10px;
+         margin: 0;
+    }
+
+    &__content h4 {
+        margin: 0;
+        padding-top: 0;
+    }
+
+    &__content li {
+        text-align: left;
+        padding-top: 0;
+        color: white;
+        font-weight: 500;
+    }
+
+      
+}
+
+    .base-img h2 {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+   
+}
+

@@ -1,0 +1,126 @@
+
+.double-column, 
+.double-column-right {
+    display: block;
+    margin: 0 auto;
+    
+    &__image {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background-size: cover;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+       
+
+    &__text {
+       display: block;
+       padding: 15px;
+    }
+
+    p, h2 {
+        text-align: center;
+    }
+
+}
+
+
+
+
+@media screen and(min-width: 480px) {
+    .double-column {
+        display: grid;
+        grid-template-areas: "text image";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        padding-top: 50px;
+        align-items: start;
+    
+        &__text {
+            width: 1fr;
+            grid-area: text;
+            align-self: start;
+            padding-top: 0;
+            padding-right: 20px;
+        }
+    
+        &__image {
+            width: 1fr;
+            align-self: start;
+            grid-area: image;
+            width: 450px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            
+        }
+
+
+        h2 {
+            text-align: left;
+            margin: 0;
+        }
+
+        p {
+            text-align: justify;
+            padding-right: 30px;
+        }
+    
+    }
+    
+    .double-column-right {
+        display: grid;
+        grid-template-areas: "image text";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        padding-top: 50px;
+        align-items: start;
+    
+        &__text {
+            width: 1fr;
+            grid-area: text;
+            align-self: start;
+            padding-left: 20px;
+            padding-top: 0;
+        }
+    
+        &__image {
+            width: 1fr;
+            align-self: start;
+            grid-area: image;
+            width: 450px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            padding: 0;
+            
+        }
+
+        &__image-masaz {
+            width: 1fr;
+            align-self: start;
+            grid-area: image;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            padding: 0;
+    
+            
+        }
+
+
+        h2 {
+            text-align: left;
+            margin: 0;
+            padding-left: 50px;
+        }
+
+        p {
+            text-align: justify;
+            padding-left: 20px;
+        }
+    
+    }
+}

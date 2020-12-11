@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hillarion.cz</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="base">
+      <header class="header">
+        <div class="header__logo">
+          <a href="/">
+            <img
+              src="/images/logo.png"
+              alt="logo Hillarion s koněm"
+              width="100%"
+            />
+          </a>
+        </div>
+
+      <nav class="navigation">
+          <input type="checkbox" class="navigation__checkbox" id="navigation-checkbox" />
+          <label for="navigation-checkbox" class="navigation__toggler">☰ Menu</label>
+
+          <ul class="navigation__list">
+            <li class="navigation__item {% if menu === 'uvod'%} navigation__item--active {% endif %}">
+              <a class="navigation__link" href="/">O nás</a>
+            </li>
+            <li class="navigation__item {% if menu === 'hipoterapie' %} navigation__item--active {% endif %}">
+              <a class="navigation__link" href="/hipoterapie">Hipoterapie</a>
+            </li>
+            <li class="navigation__item {% if menu === 'projizdky' %} navigation__item--active {% endif %}">
+              <a class="navigation__link" href="/projizdky">Aktivity s koňmi</a>
+            </li>
+            <li class="navigation__item {% if menu === 'masaze' %} navigation__item--active {% endif %}">
+              <a class="navigation__link" href="/masaze">Masáže</a>
+            </li>
+            <li class="navigation__item {% if menu === 'cenik'%} navigation__item--active {% endif %}">
+              <a class="navigation__link" href="/pricelist">Ceník</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="/#contact">Kontakt</a>
+            </li>
+          </ul>
+
+        </nav>
+      
+
+        <div class="header__phone">
+          <a href="tel: 604 338 628">
+          Tel: 604 338 628
+        </a>
+          <p class="header__mini">Volejte Po - Pá 9 - 17</p>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1083 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #faf9f9;
+  margin: 0 auto;
+}
+
+img, iframe, canvas, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.base {
+  max-width: 380px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  margin: 0 auto;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.base-pricelist {
+  width: 400px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  margin: 0 auto;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+p {
+  font-weight: 300;
+}
+
+img {
+  border-radius: 10px;
+}
+
+ul {
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+@media screen and (min-width: 480px) {
+  .base {
+    max-width: 1100px;
+    margin: 50px 100px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .base-pricelist {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header__logo {
+  width: 30px;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+}
+
+.header__mini {
+  font-size: 9px;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+}
+
+.header__phone {
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
+
+.header__phone a {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navigation {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+  font-size: 15px;
+}
+
+.navigation__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.navigation__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ADD4D9;
+  position: absolute;
+  z-index: 2;
+}
+
+.navigation__item {
+  border-bottom: 1px solid silver;
+}
+
+.navigation__link {
+  display: block;
+  padding: 15px 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.navigation__link:hover {
+  background-color: #A68C8A;
+}
+
+.navigation__checkbox:checked ~ .navigation__list {
+  display: block;
+}
+
+.navigation__toggler {
+  cursor: pointer;
+  margin-left: 20px;
+  padding-top: 100px;
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "logo navigace kontakt";
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    justify-items: stretch;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 16px;
+  }
+  .header__mini {
+    font-size: 12px;
+  }
+  .header__logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+    width: 100px;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .header__phone {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: kontakt;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .navigation {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: navigace;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .navigation__toggler {
+    display: none;
+  }
+  .navigation__list {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    background-color: #FAF9F9;
+    color: black;
+    position: relative;
+  }
+  .navigation__item {
+    border-right: 1px solid white;
+    border-bottom: 0;
+  }
+  .navigation__item--active {
+    border-radius: 10px;
+    background-color: #A68C8A;
+    color: white;
+  }
+  .navigation__link {
+    padding: 15px 15px;
+  }
+  .navigation a:hover {
+    background-color: #A68C8A;
+    color: white;
+    border-radius: 10px;
+  }
+}
+
+.button {
+  display: block;
+  margin-top: 35px;
+}
+
+.button__primary {
+  display: block;
+  width: 200px;
+  padding: 20px;
+  background-color: #ADD4D9;
+  border-radius: 10px;
+  border: 0;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+}
+
+.button__primary a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+.button__secondary {
+  display: block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.button__secondary a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+.price-container__button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 100%;
+  background-color: #ADD4D9;
+  border: 0;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.price-container__button a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+.button-page {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #9CA67B;
+  border-radius: 10px;
+  border: 0;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.button-page__link {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .button {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "primary secondary";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .button__primary {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: primary;
+    width: 150px;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    padding: 20px;
+    background-color: #ADD4D9;
+    font-size: 16px;
+  }
+  .button__primary a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+  }
+  .button__secondary {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: secondary;
+    width: 150px;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .button__secondary a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+  }
+  .button-page {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin: 0;
+  }
+}
+
+.contact {
+  display: block;
+}
+
+.contact__map {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.contact__map h3 {
+  margin: 0 auto;
+}
+
+.contact__form {
+  max-width: 100%;
+  text-align: left;
+  padding: 10px;
+  margin: 0 auto;
+  border: 3px double silver;
+  border-radius: 10px;
+}
+
+.contact__form p {
+  font-size: 10px;
+}
+
+.contact__headline {
+  padding: 20px;
+}
+
+.contact__form button {
+  margin: 0 auto;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=datetime-local], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #e4d9d9;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .contact {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "contact__headline contact__headline" "contact__map contact__form";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 80px auto;
+        grid-template-rows: 80px auto;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    justify-items: stretch;
+    padding-bottom: 50px;
+  }
+  .contact__map {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact__map;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+    height: 200px;
+    padding: 20px 0;
+  }
+  .contact__map iframe {
+    height: 450px;
+  }
+  .contact__form {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: contact__form;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .contact__form button {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin: 0;
+  }
+}
+
+.double-column,
+.double-column-right {
+  display: block;
+  margin: 0 auto;
+}
+
+.double-column__image,
+.double-column-right__image {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.double-column__text,
+.double-column-right__text {
+  display: block;
+  padding: 15px;
+}
+
+.double-column p, .double-column h2,
+.double-column-right p,
+.double-column-right h2 {
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .double-column {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "text image";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    padding-top: 50px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .double-column__text {
+    width: 1fr;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: text;
+    -ms-flex-item-align: start;
+        align-self: start;
+    padding-top: 0;
+    padding-right: 20px;
+  }
+  .double-column__image {
+    width: 1fr;
+    -ms-flex-item-align: start;
+        align-self: start;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image;
+    width: 450px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .double-column h2 {
+    text-align: left;
+    margin: 0;
+  }
+  .double-column p {
+    text-align: justify;
+    padding-right: 30px;
+  }
+  .double-column-right {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "image text";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    padding-top: 50px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .double-column-right__text {
+    width: 1fr;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: text;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    padding-left: 20px;
+    padding-top: 0;
+  }
+  .double-column-right__image {
+    width: 1fr;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image;
+    width: 450px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    padding: 0;
+  }
+  .double-column-right__image-masaz {
+    width: 1fr;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    padding: 0;
+  }
+  .double-column-right h2 {
+    text-align: left;
+    margin: 0;
+    padding-left: 50px;
+  }
+  .double-column-right p {
+    text-align: justify;
+    padding-left: 20px;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.hero {
+  background-image: url(../images/baru/DSC_0973.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  height: 500px;
+  max-width: 100%;
+}
+
+.hero__content {
+  margin: 0 auto;
+  padding: 20px;
+  text-shadow: black;
+  height: 300px;
+  width: 80;
+}
+
+.hero__content h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.hero__content p {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: url(../images/baru/DSC_0956.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    height: 600px;
+    max-width: 100%;
+  }
+  .hero__content {
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px;
+    text-shadow: black;
+    height: 400px;
+    width: 600px;
+  }
+  .hero__content h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .hero__content p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+.overview {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "overview__address overview__contact" "overview__opening-hours overview__faq";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 20px;
+  padding-top: 20px;
+  width: 80%;
+}
+
+.overview__faq--icon img {
+  width: 30px;
+}
+
+.overview__address, .overview__contact, .overview__opening-hours, .overview__faq {
+  border: 3px double silver;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.overview__address {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: overview__address;
+}
+
+.overview__contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: overview__contact;
+}
+
+.overview__opening-hours {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: overview__opening-hours;
+}
+
+.overview__faq {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: overview__faq;
+}
+
+.overview a {
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+  color: black;
+  list-style-type: none;
+}
+
+.overview-faq {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "overview-faq__address overview-faq__contact" "overview-faq__opening-hours";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.overview-faq__faq--icon img {
+  width: 30px;
+}
+
+.overview-faq__address, .overview-faq__contact, .overview-faq__opening-hours, .overview-faq__faq {
+  border: 3px double silver;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.overview-faq__address {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: overview-faq__address;
+}
+
+.overview-faq__contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: overview-faq__contact;
+}
+
+.overview-faq__opening-hours {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: overview-faq__opening-hours;
+}
+
+.overview-faq__faq {
+  grid-area: overview-faq__faq;
+}
+
+@media screen and (min-width: 480px) {
+  .overview {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "overview__address overview__contact overview__opening-hours overview__faq";
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    padding-top: 50px;
+    width: 100%;
+  }
+  .overview__opening-hours p,
+  .overview__contact p,
+  .overview__address p {
+    text-align: center;
+  }
+  .overview-faq {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "overview-faq__address overview-faq__contact overview-faq__opening-hours";
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    padding-top: 50px;
+  }
+  .overview-faq__opening-hours p,
+  .overview-faq__contact p,
+  .overview-faq__address p {
+    text-align: center;
+  }
+}
+
+.base-img h2 {
+  text-align: center;
+  color: white;
+}
+
+.base-img {
+  background-image: url(/images/baru/DSC_0973-2.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 900px;
+}
+
+.services {
+  display: block;
+  margin: 0 auto;
+}
+
+.services__content {
+  border: 3px double white;
+  color: white;
+  border-radius: 10px;
+  height: 200px;
+  text-align: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 250px;
+}
+
+.services__content h3, .services h4 {
+  padding: 10px;
+}
+
+.services__content h3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.services__content h4 {
+  margin: 0;
+}
+
+.services__content li {
+  text-align: left;
+  padding-right: 10px;
+  color: white;
+}
+
+@media screen and (min-width: 480px) {
+  .base-img {
+    background-image: url(/images/baru/DSC_0967-2-dark.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    height: 400px;
+  }
+  .base-img h2 {
+    padding-top: 20px;
+  }
+  .services {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "services__content services__content services__content";
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+  }
+  .services__content {
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+    height: 250px;
+    width: 350px;
+    color: white;
+  }
+  .services__content h3, .services h4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .services__content h3 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+  .services__content h4 {
+    margin: 0;
+    padding-top: 0;
+  }
+  .services__content li {
+    text-align: left;
+    padding-top: 0;
+    color: white;
+    font-weight: 500;
+  }
+  .base-img h2 {
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  gap: 5px;
+}
+
+.gallery__img {
+  height: auto;
+}
+
+.gallery__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 480px) {
+  .gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    gap: 5px;
+  }
+  .gallery__img {
+    height: 300px;
+  }
+}
+
+.base-pricelist {
+  margin: 30px auto;
+  display: block;
+}
+
+.price-container {
+  display: -ms-grid;
+  display: grid;
+  border: 3px double silver;
+  border-radius: 10px;
+  margin-top: 20px;
+      grid-template-areas: "headline headline" "photo price" "list list" "button button";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.price-container__headline {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: headline;
+  padding-left: 10px;
+}
+
+.price-container__price {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: price;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.price-container__img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: photo;
+  padding-left: 10px;
+}
+
+.price-container__list {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: list;
+  margin-top: 20px;
+}
+
+.price-container__button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button;
+  height: 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .price-container {
+    border-radius: 10px;
+    display: -ms-grid;
+    display: grid;
+    border: 3px double silver;
+    margin-top: 20px;
+        grid-template-areas: "photo headline headline" "photo price list" "button button button";
+    -ms-grid-columns: 30% 25% 45%;
+        grid-template-columns: 30% 25% 45%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .price-container__price {
+    text-align: center;
+  }
+  .price-container__price p {
+    text-align: center;
+  }
+  .price-container__img {
+    border-radius: 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: auto;
+    height: 200px;
+  }
+  .price-container__list {
+    padding-right: 20px;
+  }
+  .price-container__list {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  .price-container__headline 2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+}
+
+.thankyou {
+  font-size: 40px;
+  text-align: center;
+  color: silver;
+}
+
+.base {
+  margin: 15px;
+  width: 400px;
+}
+
+.base h2, p {
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .base {
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .faq h2, p {
+    text-align: left;
+  }
+  .faq.base {
+    margin-top: 100px;
+  }
+  .faq.base h1 {
+    font-size: 700;
+  }
+}
+/*# sourceMappingURL=style.css.map */

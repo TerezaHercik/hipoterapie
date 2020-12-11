@@ -1,0 +1,46 @@
+{% include "partials/header.njk" %}
+
+    <section class="hero">
+      <div class="base">
+        <div class="hero__content">
+          <h1>Hipoterapie - uzdravte tělo i&nbsp;duši na koňském hřbetu</h1>
+
+          <p>
+            Naším cílem je zkvalitňovat životy rodin s&nbsp;dětmi pomocí
+            hiporehabilitace. Chceme nabídnout alternativy ke&nbsp;klasické
+            rehabilitaci a&nbsp;zajistit rodičům možnost získat pro&nbsp;své&nbsp;díte
+            komplexní péči v&nbsp;oblasti motorické, psychické a&nbsp;sociální.
+          </p>
+        </div>
+      </div>
+
+      <div class="base">
+        <div class="button">
+          
+          <button class="button__primary" type="submit" name="tlacitko">
+            <a href="/pricelist">
+            Objednat&nbsp;se
+          </a>
+          </button>
+    
+        
+          <button class="button__secondary">
+            <a href="/hipoterapie">
+            Více&nbsp;informací
+          </a>
+        </button>
+        
+        </div>
+      </div>
+    </section>
+
+   
+
+    {{ content | safe}}
+
+    
+    {% include "partials/contact.njk" %} 
+    {% include "partials/overview.njk" %} 
+    {% include "partials/footer.njk" %} 
+
+ 
