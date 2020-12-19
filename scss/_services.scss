@@ -103,6 +103,12 @@
         color: white;
     }
 
+    &__content:hover {
+        transition-duration: 0.4s;
+        transition-property: background-color;
+        background-color: rgb(87, 83, 83);
+    }
+
     &__content h3, h4 {
         padding-top: 20px;
         padding-bottom: 10px;
@@ -127,8 +133,6 @@
         font-weight: 500;
     }
 
-      
-}
 
     .base-img h2 {
         text-align: left;
@@ -138,3 +142,4 @@
    
 }
 
+}

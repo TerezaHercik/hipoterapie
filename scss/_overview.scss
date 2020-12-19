@@ -107,6 +107,18 @@
         &__address p {
             text-align: center;
         }
+
+        &__opening-hours:hover,
+        &__contact:hover,
+        &__address:hover, 
+        &__faq:hover {
+            background-color: #E3D9D9;
+            transition-property: background-color 0.4s;
+        }
+
+        
+    }
+
     
     }
 
@@ -115,7 +127,7 @@
         display: grid;
         grid-template-areas: 
         "overview-faq__address overview-faq__contact overview-faq__opening-hours";
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 30% 30% 30%;
         grid-template-rows: auto;
         padding-top: 50px;
 
@@ -124,9 +136,17 @@
         &__address p {
             text-align: center;
         }
+
+        &__opening-hours:hover,
+        &__contact:hover,
+        &__address:hover  {
+            background-color: #E3D9D9;
+            transition-property: background-color 0.4s;
+        }
+
     
     }
        
-    }
+    
 
     

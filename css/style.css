@@ -71,6 +71,9 @@ a {
     width: 800px;
     margin: 0 auto;
   }
+  h2 {
+    text-align: left;
+  }
 }
 
 .header {
@@ -178,6 +181,7 @@ a {
     margin: 0 auto;
     padding: 0;
     font-size: 16px;
+    position: auto;
   }
   .header__mini {
     font-size: 12px;
@@ -500,6 +504,16 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
         align-self: start;
     padding-top: 0;
     padding-right: 20px;
+    height: 300px;
+    overflow: scroll;
+  }
+  .double-column__text h2 {
+    text-align: left;
+    margin: 0;
+    background-color: #FAF9F9;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .double-column__image {
     width: 1fr;
@@ -513,10 +527,6 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 10px;
-  }
-  .double-column h2 {
-    text-align: left;
-    margin: 0;
   }
   .double-column p {
     text-align: justify;
@@ -545,6 +555,17 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
         align-self: start;
     padding-left: 20px;
     padding-top: 0;
+    height: 300px;
+    overflow: scroll;
+  }
+  .double-column-right__text h2 {
+    text-align: left;
+    margin: 0;
+    padding-left: 50px;
+    background-color: #FAF9F9;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .double-column-right__image {
     width: 1fr;
@@ -575,11 +596,6 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
        object-fit: cover;
     border-radius: 10px;
     padding: 0;
-  }
-  .double-column-right h2 {
-    text-align: left;
-    margin: 0;
-    padding-left: 50px;
   }
   .double-column-right p {
     text-align: justify;
@@ -746,8 +762,8 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
 }
 
 .overview-faq__opening-hours {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: overview-faq__opening-hours;
 }
 
@@ -773,21 +789,34 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
   .overview__address p {
     text-align: center;
   }
-  .overview-faq {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "overview-faq__address overview-faq__contact overview-faq__opening-hours";
-    -ms-grid-columns: 33% 33% 33%;
-        grid-template-columns: 33% 33% 33%;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    padding-top: 50px;
+  .overview__opening-hours:hover, .overview__contact:hover, .overview__address:hover, .overview__faq:hover {
+    background-color: #E3D9D9;
+    -webkit-transition-property: background-color 0.4s;
+    transition-property: background-color 0.4s;
   }
-  .overview-faq__opening-hours p,
-  .overview-faq__contact p,
-  .overview-faq__address p {
-    text-align: center;
-  }
+}
+
+.overview-faq {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "overview-faq__address overview-faq__contact overview-faq__opening-hours";
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding-top: 50px;
+}
+
+.overview-faq__opening-hours p,
+.overview-faq__contact p,
+.overview-faq__address p {
+  text-align: center;
+}
+
+.overview-faq__opening-hours:hover, .overview-faq__contact:hover, .overview-faq__address:hover {
+  background-color: #E3D9D9;
+  -webkit-transition-property: background-color 0.4s;
+  transition-property: background-color 0.4s;
 }
 
 .base-img h2 {
@@ -886,6 +915,13 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
     width: 350px;
     color: white;
   }
+  .services__content:hover {
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    background-color: #575353;
+  }
   .services__content h3, .services h4 {
     padding-top: 20px;
     padding-bottom: 10px;
@@ -908,7 +944,7 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
     color: white;
     font-weight: 500;
   }
-  .base-img h2 {
+  .services .base-img h2 {
     text-align: left;
     padding-left: 30px;
   }
@@ -947,6 +983,10 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
   }
   .gallery__img {
     height: 300px;
+  }
+  .gallery__img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -1044,7 +1084,7 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
     margin: 0;
     padding-bottom: 10px;
   }
-  .price-container__headline 2 {
+  .price-container__headline {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0;

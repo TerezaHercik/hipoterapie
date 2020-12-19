@@ -43,6 +43,16 @@
             align-self: start;
             padding-top: 0;
             padding-right: 20px;
+            height: 300px;
+            overflow: scroll;
+        }
+
+        &__text h2 {
+            text-align: left;
+            margin: 0;
+            background-color: #FAF9F9;
+            top: 0;
+            position: sticky;
         }
     
         &__image {
@@ -57,10 +67,6 @@
         }
 
 
-        h2 {
-            text-align: left;
-            margin: 0;
-        }
 
         p {
             text-align: justify;
@@ -83,7 +89,19 @@
             align-self: start;
             padding-left: 20px;
             padding-top: 0;
+            height: 300px;
+            overflow: scroll;
         }
+
+        &__text h2 {
+            text-align: left;
+            margin: 0;
+            padding-left: 50px;
+            background-color: #FAF9F9;
+            top: 0;
+            position: sticky;
+        }
+
     
         &__image {
             width: 1fr;
@@ -111,16 +129,11 @@
         }
 
 
-        h2 {
-            text-align: left;
-            margin: 0;
-            padding-left: 50px;
-        }
-
         p {
             text-align: justify;
             padding-left: 20px;
         }
     
     }
+
 }
