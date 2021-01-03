@@ -50,6 +50,8 @@
 .overview-faq {
 
     display: grid;
+    position: relative;
+    overflow: none;
     grid-template-areas: 
     "overview-faq__address overview-faq__contact"
     "overview-faq__opening-hours overview-faq__faq";
