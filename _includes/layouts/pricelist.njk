@@ -11,8 +11,13 @@
     <h2 class="contact__headline">Zamluvte si volný termín</h2>
     <div class="contact__form">
 
-      <form action="action_page.php">
+      <form action="https://submit-form.com/ElHsCOl1">
         <div class="container">
+          <input
+          type="hidden"
+          name="_redirect"
+          value="https://hillarion.netlify.app//thankyoupage.html"
+        />
     
       
           <label for="email"><b>E-mail</b></label>
@@ -25,8 +30,9 @@
           <input type="tel" placeholder="Telefon ve tvaru xxx xxx xxx" name="telefon" id="telefon">
          
       <br>
-      <label for="datum"><b>Datum a čas</b></label><br>
-      <input type="datetime-local" name="datum" id="datum">
+      <br>
+          <label for="datum"><b>Datum a čas</b></label>
+          <input type="text" placeholder="Preferované datum a čas" name="datum" id="datum">
       <br>
       <br>
                 <button type="submit" class="button__primary">Odeslat</button>
