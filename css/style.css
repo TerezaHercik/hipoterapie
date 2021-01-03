@@ -729,7 +729,7 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
 .overview-faq {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "overview-faq__address overview-faq__contact" "overview-faq__opening-hours";
+      grid-template-areas: "overview-faq__address overview-faq__contact" "overview-faq__opening-hours overview-faq__faq";
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   -ms-grid-rows: auto auto;
@@ -762,12 +762,14 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
 }
 
 .overview-faq__opening-hours {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: overview-faq__opening-hours;
 }
 
 .overview-faq__faq {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: overview-faq__faq;
 }
 
@@ -794,29 +796,26 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
     -webkit-transition-property: background-color 0.4s;
     transition-property: background-color 0.4s;
   }
-}
-
-.overview-faq {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "overview-faq__address overview-faq__contact overview-faq__opening-hours";
-  -ms-grid-columns: 30% 30% 30%;
-      grid-template-columns: 30% 30% 30%;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  padding-top: 50px;
-}
-
-.overview-faq__opening-hours p,
-.overview-faq__contact p,
-.overview-faq__address p {
-  text-align: center;
-}
-
-.overview-faq__opening-hours:hover, .overview-faq__contact:hover, .overview-faq__address:hover {
-  background-color: #E3D9D9;
-  -webkit-transition-property: background-color 0.4s;
-  transition-property: background-color 0.4s;
+  .overview-faq {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "overview-faq__address overview-faq__contact overview-faq__opening-hours";
+    -ms-grid-columns: 30% 30% 30%;
+        grid-template-columns: 30% 30% 30%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    padding-top: 50px;
+  }
+  .overview-faq__opening-hours p,
+  .overview-faq__contact p,
+  .overview-faq__address p {
+    text-align: center;
+  }
+  .overview-faq__opening-hours:hover, .overview-faq__contact:hover, .overview-faq__address:hover {
+    background-color: #E3D9D9;
+    -webkit-transition-property: background-color 0.4s;
+    transition-property: background-color 0.4s;
+  }
 }
 
 .base-img h2 {
@@ -1094,7 +1093,7 @@ input[type=text], input[type=email], input[type=tel], input[type=datetime-local]
 .thankyou {
   font-size: 40px;
   text-align: center;
-  color: silver;
+  color: grey;
 }
 
 .base {
